@@ -701,11 +701,13 @@ StageNode::WorldCallback()
                                                       mapName(BASE_FIDUCIAL_LINK, r, static_cast<Stg::Model*>(robotmodel->positionmodel))));
         }
 
+#if 0
         //the position of the robot
         tf.sendTransform(tf::StampedTransform(tf::Transform::getIdentity(),
                                               sim_time,
                                               mapName(BASE_FOOTPRINT, r, static_cast<Stg::Model*>(robotmodel->positionmodel)),
                                               mapName(BASE_LINK, r, static_cast<Stg::Model*>(robotmodel->positionmodel))));
+#endif
 
         // Get latest odometry data
         // Translate into ROS message format and publish
